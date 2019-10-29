@@ -14,3 +14,31 @@ alias sup='sudo supervisorctl restart `basename $(pwd)`'
 ###
 alias vmmX='/vagrant/vm.sh mount'
 alias vmm='/vagrant/vm.sh mount `basename $(pwd)`'
+
+##
+# Accessing projects
+###
+alias rr='cd /var/www/lafourchette-rr/; pwd'
+alias bo='cd /var/www/lafourchette-bo/; pwd'
+alias b2b='cd /var/www/lafourchette-b2b/; pwd'
+alias core='cd /var/www/lafourchette-core/; pwd'
+alias portal='cd /var/www/lafourchette-portal/; pwd'
+alias mailer='cd /var/www/lafourchette-mailer/; pwd'
+alias rs='cd /var/www/reservation-service/; pwd'
+alias tfmapi='cd /var/www/tfm-api/; pwd'
+alias messw='cd /var/www/messaging-worker/; pwd'
+
+##
+# Clean up
+##
+alias findBigLogFiles='sudo find /var/log/ -size +100M -name *.log'
+alias findBigFiles='find ${WORKSPACE}/ -size +100M'
+
+##
+# Symfony
+###
+alias ac='php app/console'
+alias validate_js='php app/console assetic:dump --no-debug'
+alias cc='php app/console cache:clear'
+alias unit='./bin/phpunit'
+alias coverunit='./bin/phpunit --coverage-html=${WORKSPACE}/codecoverage/`basename "$PWD"`'
