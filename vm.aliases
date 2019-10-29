@@ -1,0 +1,16 @@
+###
+# VM only aliases
+##
+
+##
+# Supervisor commands
+###
+alias supstatus='sudo supervisorctl status'
+alias suprun='sudo supervisorctl status | grep RUNNING'
+alias sup='sudo supervisorctl restart `basename $(pwd)`'
+
+##
+# Mounting projects
+###
+alias vmmX='/vagrant/vm.sh mount'
+alias vmm='/vagrant/vm.sh mount `basename $(pwd)`'
