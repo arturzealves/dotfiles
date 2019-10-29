@@ -16,6 +16,7 @@ alias gcm='git checkout master'
 alias gp='git pull'
 alias gfp='git fetch; git pull'
 alias gmom='git fetch; git merge origin/master'
+alias up='git clean -fd;grh;gfp;make;'
 
 ##
 # Push local repository
